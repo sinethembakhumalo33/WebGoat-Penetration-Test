@@ -6,22 +6,40 @@ High
 
 ## Description
 
-The assessment included testing the application's SQL Injection lesson within OWASP WebGoat as part of the controlled lab exercise.
+The assessment included testing for SQL Injection vulnerabilities within the WebGoat training environment. SQL Injection occurs when user input is improperly handled by backend database queries.
+
+## Assessment Activities
+
+- Input validation review
+- SQL Injection lesson assessment
+- Request analysis using Burp Suite
+- Verification using SQLMap where appropriate
 
 ## Impact
 
-Successful SQL injection can expose or modify backend data and bypass intended application logic.
+Successful SQL Injection may result in:
+
+- Unauthorized data disclosure
+- Database modification
+- Authentication bypass
+- Loss of confidentiality and integrity
 
 ## Evidence
 
-See the `Screenshots/` and `Evidence/` directories.
+Supporting evidence is available within:
 
-## Remediation
+- Evidence/Burp/
+- Evidence/SQLMap/
+- Screenshots/
+
+## Recommendations
 
 - Use parameterized queries.
-- Validate input.
+- Implement prepared statements.
+- Validate and sanitize user input.
 - Apply least-privilege database permissions.
 
 ## References
 
 - OWASP SQL Injection Prevention Cheat Sheet
+- CWE-89
